@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/learningnotes.iml" filepath="$PROJECT_DIR$/learningnotes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetCode/leetCode.iml" filepath="$PROJECT_DIR$/leetCode/leetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybats_helloworld/mybats_helloworld.iml" filepath="$PROJECT_DIR$/mybats_helloworld/mybats_helloworld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro01/pro01.iml" filepath="$PROJECT_DIR$/pro01/pro01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro02-javaweb/pro02-javaweb.iml" filepath="$PROJECT_DIR$/pro02-javaweb/pro02-javaweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro03-qqzone1.0/pro03-qqzone1.0.iml" filepath="$PROJECT_DIR$/pro03-qqzone1.0/pro03-qqzone1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro04-maven/pro04-maven.iml" filepath="$PROJECT_DIR$/pro04-maven/pro04-maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro04-maven/pro04-maven-sub01/pro04-maven-sub01.iml" filepath="$PROJECT_DIR$/pro04-maven/pro04-maven-sub01/pro04-maven-sub01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro04-maven/pro04-maven-sub02-web/pro04-maven-sub02-web.iml" filepath="$PROJECT_DIR$/pro04-maven/pro04-maven-sub02-web/pro04-maven-sub02-web.iml" />
     </modules>
   </component>
 </project>

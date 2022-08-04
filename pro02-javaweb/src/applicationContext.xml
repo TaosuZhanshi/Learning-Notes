@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<beans>
+    <bean id="customerDAO" class="com.myssm.CustomerDAO.CustomerDAOImpl"></bean>
+    <bean id="customerService" class="com.customer.biz.impl.CustomerServiceImpl">
+        <property name="customerDAO" ref="customerDAO"/>
+    </bean>
+
+    <!-- 这个标签的作用是将来servlet中涉及的名字对应的类是customer，那么就要用CustomerController来对应-->
+    <bean id = "customer" class ="com.customer.controllers.CustomerController">
+        <property name="customerService" ref="customerService"/>
+    </bean>
+</beans>

@@ -8,7 +8,7 @@ public class RadixSort
 {
     public static void main(String[] args)
     {
-        int[] luan1 = {9, 78, 0, -23, -567, -70};
+        int[] luan1 = {-10000,-1,0,3,10000};
         int[] zhen1 = radixSort(luan1);
         System.out.println("arr = " + Arrays.toString(zhen1));
 
@@ -24,7 +24,6 @@ public class RadixSort
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String data1Str = simpleDateFormat.format(data1);
         System.out.println("排序前的时间是" + data1Str);
-
 
         int[] zhen = radixSort(luan);
 

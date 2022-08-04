@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet", href="css/index.css">
+    <script language="JavaScript" src="js/index.js"></script>
+</head>
+<body>
+    <div id="div_container">
+        <div id="div_customer_list">
+            <p class="center f30">欢迎使用客户管理系统</p>
+            <div id="div_add">
+                <form action="customer.do" >
+                    <input type="hidden" name="operate" value="index" />
+                    <input type="hidden" name="operate1" value="search" />
+                    请输入查询关键字:<input type="text" name="keyword" />
+                    <input type="submit" value="查询" />
+                </form>
+                <a th:href="@{/add.html}">添加新客户</a>
+            </div>
+            <table id="tbl_customer">
+                <tr>
+                    <th class="w20" >名称</th>
+                    <th class="w20">邮箱</th>
+                    <th class="w20">生日</th>
+                    <th class="w20">操作</th>
+                </tr>
+                <tr th:if="${#lists.isEmpty(session.customerList)}">
+                    <td colspan="4">无客户</td>
+                </tr>
+                <tr th:unless="${#lists.isEmpty(session.customerList)}" th:each="customer : ${session.customerList}">
+                    <td ><a th:text="${customer.name}" th:href="@{/customer.do(id = ${customer.id},operate='edit')}">李飞飞</a></td>
+                    <td th:text="${customer.email}">lifwfw@163.com</td>
+                    <td th:text="${customer.birth}">1989-04-06</td>
+                    <td ><img src="images/delete.jpg"  width="24px" height="24px" th:onclick="delCustomer([[${customer.id}]])"/></td>
+                </tr>
+            </table>
+            <div style="width: 60%;margin-left: 20%;margin-bottom: 10%;" class="center">
+                <input type="button" value="首 页" th:onclick="toPage(1)" th:disabled="${session.pageNum==1}"/>
+                <input type="button" value="上一页" th:onclick="toPage([[${session.pageNum - 1}]])" th:disabled="${session.pageNum==1}"/>
+                <input type="button" value="下一页" th:onclick="toPage([[${session.pageNum + 1}]])" th:disabled="${session.pageNum==session.pageCount}"/>
+                <input type="button" value="尾 页" th:onclick="toPage([[${session.pageCount}]])" th:disabled="${session.pageNum==session.pageCount}"/>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

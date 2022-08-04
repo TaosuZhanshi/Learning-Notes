@@ -7,7 +7,11 @@ public class QuickSort
 {
     public static void main (String[] args)
     {
-        int[] luan = {9, 78, 0, -23, -567, -70};
+        int[] luan = {-10,-5,-4,-3,-2,-1,0,1,1,7};
+        for(int i = 0; i < luan.length; i ++)
+        {
+            luan[i] = Math.abs(luan[i]);
+        }
         int[] zhen = quickSort(luan, 0, luan.length - 1);
         System.out.println("arr = " + Arrays.toString(zhen));
 
